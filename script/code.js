@@ -1,20 +1,14 @@
 document.querySelector('[confirm]').addEventListener('click',calculate)
-function calculate (params) {
-    let quantity = +document.querySelector('#qty').value
-    let Output= document.querySelector('[Output]')
-    let price= document.querySelector('#price')
-    let myPromise = new Promise( (resolve , reject) => {
-        if (quantity <1 )
-            reject('Please make sure you have specified how many quantities you want')
-            else
-            resolve(quantity*price)
-        }
-    )
-    myPromise.then(value => {
-        Output.textContent =parseFloat(value)
-    })
-    .catch(value => {
-        Output.textContent= parseFloat(value)
-    })
+function calculate () {
+    let femalequantity = +document.querySelector('[femaleqty]').value
+    let malequantity = +document.querySelector('[maleqty]').value
+    let Output1= document.querySelector('[femaleOutput]')
+    let Output2= document.querySelector('[maleOutput]')
+    let price1= +document.querySelector('#femalePrice')
+    let price2= +document.querySelector('#femalePrice')
+    let totalPrice = document.querySelector('#totalBtn')
+    Output1.innerText = parseFloat(`${price1.innerText}*${femalequantity}`).toFixed(2)
+Output2.innerText = parseFloat(`${price2.innerText}*${malequantity}`).toFixed(2)
+totalPrice.innerText = parseFloat(`${Output1.innerText}+${Output2.innerText}`).toFixed(2)
 }
   

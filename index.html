@@ -22,87 +22,90 @@
     </div>
     <div id="sidebar">
       <img src="./images/swegga.jpg" height="350" width="150" alt="Swegga Fashion">
-    </div>
-    <div id="main-division">
-      <form id="orders">
-        <div id="main">
-            <form action="orders">
-              <table>
-                <caption>
-                  Product summary
-                </caption>
-                <thead>
-                  <th>Description</th>
-                  <th>Size</th>
-                  <th>Color</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                  <th>Total</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <a href="./pages/female.html">Female Ski Jackets</a>
-                    </td>
-                    <td>
-                      <select name="size" id="size">
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                      </select>
-                    </td>
-                    <td>
-                      <select name="Color" id="Color">
-                        <option value="red">Red</option>
-                        <option value="pink">Pink</option>
-                        <option value="black">Black</option>
-                      </select>
-                    </td>
-                    <td>150.95</td>
-                    <td><input type="text" /></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <a href="./pages/male.html">Male Ski Jackets</a>
-                    </td>
-                    <td>
-                      <select name="size" id="size">
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                      </select>
-                    </td>
-                    <td>
-                      <select name="Color" id="Color">
-                        <option value="red">Red</option>
-                        <option value="blue">Blue</option>
-                        <option value="white">White</option>
-                      </select>
-                    </td>
-                    <td>180.95</td>
-                    <td><input type="text" /></td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td colspan="4">Click to confirm and process your order</td>
-                    <td>
-                      <input
-                        type="button"
-                        name="confirm"
-                        id="confirm"
-                        value="Total price"
-                      />
-                    </td>
-                  </tr>
-                </tfoot>
-              </table>
-            </form>
+      </div>
+      <div id="main">
+        <form action="orders">
+          <table>
+            <caption>
+              Product summary
+            </caption>
+            <thead>
+              <th>Description</th>
+              <th>Size</th>
+              <th>Color</th>
+              <th id="price">Price</th>
+              <th >Quantity</th>
+              <th>Total</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="./pages/female.html">Female Ski Jackets</a>
+                </td>
+                <td>
+                  <select name="size" id="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="Color" id="Color">
+                    <option value="red">Red</option>
+                    <option value="pink">Pink</option>
+                    <option value="black">Black</option>
+                  </select>
+                </td>
+                <td femalePrice>150.95</td>
+                <td><input type="text" femaleqty required/></td>
+                <td femaleOutput> </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="./pages/male.html">Male Ski Jackets</a>
+                </td>
+                <td>
+                  <select name="size" id="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="Color" id="Color">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="white">White</option>
+                  </select>
+                </td>
+                <td malePrice>180.95</td>
+                <td><input type="text" maleqty required/></td>
+                <td maleOutput></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4">Click to confirm and process your order</td>
+                <td>
+                  <input
+                    type="button"
+                    confirm
+                    id="confirm"
+                    value="Total price"
+                  />
+                </td>
+                <td id="totalBtn"></td>
+              </tr>
+            </tfoot>
+          </table>
+        </form>
       </div>
       <div id="footer">
-        <p class="copyright">© 2020 Swegga Fashion - Zizipho Copiso</p>
-        <script src="./script/code.js"></script>
+        <p class="copyright">
+            &copy;  2020 Swegga Fashion -ZIZIPHO COPISO
+        </p>
       </div>
     </div>
-</body>
+    <script src="./script/code.js"></script>
+  </body>
 </html>
